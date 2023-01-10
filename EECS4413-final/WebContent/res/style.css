@@ -1,0 +1,734 @@
+@charset "ISO-8859-1";
+
+.clright { clear:right; }
+
+body {
+	margin: 0;
+	background-color:black;
+}
+a {
+	color:blue;
+}
+a:hover {
+	color:red;
+}
+footer nav a:hover {
+	color:white;
+}
+
+.headstrip {
+	background-color:#000;
+	height:28px;
+	width:100%;
+	box-shadow:rgba(30,30,30,0.15) 0 -4px 3px inset;
+	overflow:hidden;
+}
+.wrapper { 
+	width:1100px; 
+	margin:0 auto;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+}
+ul li { display:inline; margin:0 4px; }
+ul li a { text-decoration:none; }
+.linknav { display:inline-block; }
+.linknav ul {
+	width:55px;
+	padding:2px 0;
+}
+.linknav ul li a { color:#ccc; padding:4px 8px 4px 8px; font-size:14px; }
+.linknav ul li a:hover { color:white; background-color:rgba(255, 255, 255, 0.3); }
+.adminContainer ul, .adminContainer ol { list-style-type: bullet; }
+.adminContainer ul li, .adminContainer ol { display:block; }
+
+.homeTitle {
+    text-align: center;
+}
+
+.disclaimer {
+    text-align: center;
+    font-weight:bold;
+	display:block;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+.search-container form {
+	width:75%;
+	text-align:center;
+}
+.search-container form input[type=text] {
+  padding: 6px;
+  border: none;
+  margin: 8px 16px 8px 30px;
+  font-size: 17px;
+  width: 75%;
+  height: 34px;
+  text-align:center;
+}
+
+.search-container form button {
+  padding: 6px;
+  margin-top: 8px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  height: 40px;
+}
+
+.linknav .search-container form button:hover { background: #ccc; }
+
+.usernav { padding:4px 0 0 0; margin:0; float:right;}
+.usernav ul {
+	overflow: hidden;
+}
+.usernav ul li form { display:inline; }
+.usernav ul li form input, .usernav ul li form button { margin:0 3px; padding:1px 4px; }
+.usernav ul li form button { background-color:#797979; color:white; border:1px solid gray; }
+.usernav ul li form button:hover { cursor:pointer; background-color:#a4a4a4; }
+.usernav ul li span { color:white; text-decoration:none; }
+.usernav ul li a { color:#bbb; }
+.usernav ul li a:hover { color:white; }
+.usernav ul li span a { color:white; }
+.usernav ul li span a:hover { color:#bbb; }
+
+main {
+	background-color: beige;
+	min-height: 720px;
+	padding: 24px 0;
+}
+
+footer {
+	background-color: #aaa;
+	padding:16px 0;
+	border-top: 1px solid black;
+	border-bottom: 1px solid #d2d2d2;
+	box-shadow: rgba(255, 255, 255, 0.1) 0 3px 3px;
+}
+
+footer nav {
+	background-color: #8e8e8e;
+	text-align:center;
+	border-top: 1px solid black;
+	border-bottom: 1px solid #d2d2d2;
+	box-shadow: rgba(255, 255, 255, 0.1) 0 3px 3px;
+}
+
+footer li {
+	margin:0 30px;
+	font-family:"Arial";
+	font-size: 22px;
+	font-weight: bold;
+	text-shadow: black 2px 1px;
+}
+
+footer li a {
+	color:#eaeaea;
+	padding: 0 8px;
+}
+
+footer li a:hover {
+	background-color: rgba(227, 227, 227, 0.3);
+}
+
+.regForm {    
+	border: 1px solid black;
+	padding: 12px;
+}
+
+.regForm label {
+	display:block;
+	text-decoration: underline;
+	font-family: Arial;
+}
+
+.regForm input {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	width: 25%;
+}
+
+.regForm button {    
+	width: 100%;
+	padding: 18px 0;
+	margin-top: 12px;
+	background-color: orange;
+	border-color: white;
+	color: white;
+	font-weight: bold;
+	font-family: "Arial";
+	font-size: 20px;
+}
+
+.regForm button:hover {
+	border-color:orange;
+	color:orange;
+	background-color:white;
+	cursor:pointer;
+}
+
+.errorMsg {
+    background-color: yellow;
+	text-align: center;
+	padding: 2px 0 4px 0;
+	border-bottom: 1px dashed black;
+}
+
+.success {
+    background-color: #47db47;
+	text-align: center;
+	padding: 2px 0 4px 0;
+	border-bottom: 1px dashed black;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: "\2605";
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label 
+{
+    color: #c59b08;
+}
+
+.searchTable {
+	margin: 0 auto;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.searchTable th {
+	padding-bottom: 6px;
+	border: none;
+	background-color: #ffcf91;
+}
+.searchTable td {
+	text-align: center;
+	border: 1px dashed gray;
+	height: 64px;
+}
+.searchTable tr:nth-child(odd) {
+	background-color:#ffffff80;;
+}
+.searchTable tr:nth-child(even) {
+	background-color:#01010108;;
+}
+.searchTable tr:hover {
+	background-color:white;
+}
+.searchTable td input[type="number"] {
+	text-align:center;
+	width:20%;
+}
+
+.bookDisplay {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 6px 5px 6px #888;
+    margin: 24px 0 32px 0;
+}
+.bookDisplay h1 {
+    text-align: center;
+    margin-bottom:0;
+}
+.bookDisplay h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    margin-top:0;
+}
+
+.buyRow table {
+    margin: 0 auto 24px auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 75%;
+}
+.buyRow td {
+    background-color: beige;
+    padding: 0;
+    text-align: center;
+    border: 1px dashed gray;
+}
+.buyRow form {
+    width: 100%;
+    height: 100%;
+}
+.buyRow button {
+    width: 100%;
+    height: 64px;
+}
+.buyRow td span {
+	font-weight:bold;
+}
+
+.quantityButton {
+    background-color: #ff8080;
+    padding: 8px 14px;
+    border: 2px outset #ff7d2f;
+    margin: 6px 0;
+    cursor: pointer;
+}
+.quantityButton:hover {
+	border-style:inset;
+	background-color: #d99087;
+}
+
+.processButton {
+    margin: 0 auto;
+    display: block;
+    padding: 18px 80px;
+    border: 2px solid whitesmoke;
+    background-color: orange;
+    box-shadow: 0 0 2px black;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 16px;
+}
+.processButton:hover {
+    background-color: white;
+    border-color: orange;
+    color: orange;
+}
+.processButton:disabled {
+    background-color: lightgray;
+    color: gray;
+    border-color: gray;
+    cursor: default;
+}
+
+.paymentContainer, .addressBookContainer {
+	text-align:center;
+	background-color:#fffc;
+	padding: 24px 12px 100px 12px;
+	border-radius: 16px;
+}
+.paymentContainer form table, .addressBookContainer form table {
+	margin:0 auto;
+}
+.paymentContainer form.loginForm button, .addressBookContainer form.loginForm button {
+	height:50px;
+}
+.paymentContainer form.loginForm input, .addressBookContainer form.loginForm input {
+	text-align:center;
+}
+.paymentContainer .loginForm td:nth-child(1), .addressBookContainer .loginForm td:nth-child(1) {
+    text-align: left;
+}
+
+.addressBookContainer form.newAddress button {
+	padding: 14px 32px;
+	margin-top: 64px;
+	border: 3px outset #deb487;
+	background-color: #ffd4a6;
+	font-family: "Arial";
+}
+.addressBookContainer form.newAddress button:hover {
+	cursor: pointer;
+	background-color: #dfa988;
+	border-style: inset;
+	color: #625545;
+}
+.addressBookContainer .addressesBox {
+    margin: 12px auto;
+}
+.addressBookContainer form.defaultAddressBook button {
+    padding: 8px 24px;
+	font-family: "Arial";
+}
+
+.reviews table {
+	margin: 0 auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 80%;
+}
+.reviews th {
+    border: 1px solid black;
+    padding: 5px 5px;
+}
+.reviews td {
+    border: 1px solid black;
+    padding: 5px 5px;
+    text-align: center;
+}
+.reviews td:nth-child(3) {
+    text-align: left;
+}
+
+.reviewContainer {
+    background-color: white;
+    margin-top: 30px;
+    padding: 8px;
+    text-align: center;
+}
+.reviewContainer table {
+	width:100%;
+}
+.reviewContainer table button {
+    height: 140px;
+    width: 100%;
+}
+.reviewContainer table label {
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.reviewContainer table td:nth-child(1) input[type="text"], .reviewContainer table textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+.reviewContainer table td:nth-child(1) input[type="text"] { text-align:center; height:50px; }
+.reviewContainer table textarea { resize:none; padding:4px; }
+.ratingContainer {
+    width: 220px;
+    margin: 0 auto;
+}
+
+.homeTitle {
+	font-weight:bold;
+	font-size:64px;
+	display:block;
+}
+
+.addressContainer {
+	margin:0 auto;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+	font-family: "Roboto";
+}
+div.address {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	margin-top: 30px;
+	border: 1px solid whitesmoke;
+	padding: 21px;
+	border-radius: 4px;
+}
+h4.title {
+	text-align: center;
+	margin-bottom: 45px;
+}
+:root {
+	--omrs-color-ink-lowest-contrast: rgba(47, 60, 85, 0.18);
+	--omrs-color-ink-low-contrast: rgba(60, 60, 67, 0.3);
+	--omrs-color-ink-medium-contrast: rgba(19, 19, 21, 0.6);
+	--omrs-color-interaction: #1e4bd1;
+	--omrs-color-interaction-minus-two: rgba(73, 133, 224, 0.12);
+	--omrs-color-danger: #b50706;
+	--omrs-color-bg-low-contrast: #eff1f2;
+	--omrs-color-ink-high-contrast: #121212;
+	--omrs-color-bg-high-contrast: #ffffff;
+	
+}
+/** END: Non Openmrs CSS **/
+div.omrs-input-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 20.4375rem;
+}
+
+/* Input*/
+.omrs-input-underlined > input,
+.omrs-input-filled > input {
+	border: none;
+	border-bottom: 0.125rem solid var(--omrs-color-ink-medium-contrast);
+	width: 100%;
+	height: 2rem;
+	font-size: 1.0625rem;
+	padding-left: 0.875rem;
+	line-height: 147.6%;
+	padding-top: 0.825rem;
+	padding-bottom: 0.5rem;
+}
+
+.omrs-input-underlined > input:focus,
+.omrs-input-filled > input:focus {
+	outline: none;
+}
+
+.omrs-input-underlined > .omrs-input-label,
+.omrs-input-filled > .omrs-input-label {
+	position: absolute;
+	top: 0.9375rem;
+	left: 0.875rem;
+	line-height: 147.6%;
+	color: var(--omrs-color-ink-medium-contrast);
+	transition: top .2s;
+}
+
+.omrs-input-underlined > svg,
+.omrs-input-filled > svg {
+	position: absolute;
+	top: 0.9375rem;
+	right: 0.875rem;
+	fill: var(--omrs-color-ink-medium-contrast);
+}
+
+.omrs-input-underlined > .omrs-input-helper,
+.omrs-input-filled > .omrs-input-helper {
+	font-size: 0.9375rem;
+	color: var(--omrs-color-ink-medium-contrast);
+	letter-spacing: 0.0275rem;
+	margin: 0.125rem 0.875rem;
+}
+
+.omrs-input-underlined > input:hover,
+.omrs-input-filled > input:hover {
+	background: var(--omrs-color-interaction-minus-two);
+	border-color: var(--omrs-color-ink-high-contrast);
+}
+
+.omrs-input-underlined > input:focus + .omrs-input-label,
+.omrs-input-underlined > input:valid + .omrs-input-label,
+.omrs-input-filled > input:focus + .omrs-input-label,
+.omrs-input-filled > input:valid + .omrs-input-label {
+	top: 0;
+	font-size: 0.9375rem;
+	margin-bottom: 32px;;
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus + .omrs-input-label,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus + .omrs-input-label {
+	color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus {
+	border-color: var(--omrs-color-interaction);
+}
+
+.omrs-input-underlined:not(.omrs-input-danger) > input:focus ~ svg,
+.omrs-input-filled:not(.omrs-input-danger) > input:focus ~ svg {
+	fill: var(--omrs-color-ink-high-contrast);
+}
+
+/** DISABLED **/
+
+.omrs-input-underlined > input:disabled {
+	background: var(--omrs-color-bg-low-contrast);
+	cursor: not-allowed;
+}
+
+.omrs-input-underlined > input:disabled + .omrs-input-label,
+.omrs-input-underlined > input:disabled ~ .omrs-input-helper{
+	color: var(--omrs-color-ink-low-contrast);
+}
+
+.omrs-input-underlined > input:disabled ~ svg {
+	fill: var(--omrs-color-ink-low-contrast);
+}
+
+
+/** DANGER **/
+
+.omrs-input-underlined.omrs-input-danger > .omrs-input-label, .omrs-input-underlined.omrs-input-danger > .omrs-input-helper,
+.omrs-input-filled.omrs-input-danger > .omrs-input-label, .omrs-input-filled.omrs-input-danger > .omrs-input-helper{
+	color: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > svg {
+	fill: var(--omrs-color-danger);
+}
+
+.omrs-input-danger > input {
+	border-color: var(--omrs-color-danger);
+}
+
+.omrs-input-underlined > input {
+	background: var(--omrs-color-bg-high-contrast);
+}
+.omrs-input-filled > input {
+	background: var(--omrs-color-bg-low-contrast);
+}
+
+/* just added testing*/
+.buttondiv
+{
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  margin-left: 50%;
+  margin-right: 50%
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
+
+}
+.btn-three {
+	color: F0F8FF;
+	transition: all 0.5s;
+	position: relative;
+}
+.btn-three::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: F0F8FF;
+	transition: all 0.3s;
+}
+.btn-three:hover::before {
+	opacity: 0 ;
+	transform: scale(0.5,0.5);
+}
+.btn-three::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: all 0.3s;
+	border: 1px solid rgba(255,255,255,0.5);
+	transform: scale(1.2,1.2);
+}
+.btn-three:hover::after {
+	opacity: 1;
+	transform: scale(1,1);
+.columnone {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.columntwo {
+  float: right;
+  width: 50%;
+  padding: 10px;
+}}}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input#creditCard::-webkit-outer-spin-button,
+input#creditCard::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input#creditCard[type=number] {
+  -moz-appearance: textfield;
+  padding:4px;
+}
+
+
+.addressesBox table, .confirmAddress table {
+	border-collapse:collapse;
+	width:100%;
+}
+.addressesBox td, .confirmAddress td {
+	border:1px solid black;
+}
+td.addressCheck {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	width:10%;
+}
+.addressCol2 {
+	width:60%;
+}
+.addressesBox {
+    background-color: #dfdfdf;
+    width: 65%;
+    margin: 0 auto;
+    height: 232px;
+    border: 1px solid black;
+    padding: 8px 4px;
+    overflow-y:scroll;
+}
+#shippingBox {
+	display:none;
+}
+
+.submitOrder {
+    margin: 0 auto;
+    display: block;
+    padding: 18px 80px;
+    border: 2px solid whitesmoke;
+    background-color: #09cc09;
+    box-shadow: 0 0 2px black;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 16px;
+}
+.submitOrder:hover {
+    background-color: white;
+    border-color: #09cc09;
+    color: #09cc09;
+}
+.submitOrder:disabled {
+    background-color: lightgray;
+    color: gray;
+    border-color: gray;
+    cursor: default;
+}
+.cardContainer label {
+    margin-right: 15px;
+}
+.cardContainer input {
+	padding: 4px;
+}
+.confirmationContainer .searchTable input:read-only {
+	background-color: lightgray;
+	text-align:center;
+}
